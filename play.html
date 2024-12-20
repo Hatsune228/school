@@ -1,61 +1,60 @@
-    <!DOCTYPE html>
-    <html class="play_page">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Anime Page</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html class="play_page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <div class="header">
-            <div class="left">
-                <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
-                <button data-page="index.html"><i class="fa-brands fa-html5"></i></button>
-            </div>
-            <div class="center">
-                <div class="search-bar">
-                    <p><i class="fa-solid fa-magnifying-glass"></i></p>
-                    <input type="text" placeholder="Анимэ хайх...">
-                </div>
-            </div>
-            <div class="right">
-                <button data-page="login.html" class="header-btn">Нэвтрэх</button>
+    <div class="header">
+        <div class="left">
+            <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
+            <button data-page="index.html" class="logo"><i class="fa-brands fa-html5"></i></button>
+        </div>
+        <div class="center">
+            <div class="search-bar">
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+                <input type="text" placeholder="Анимэ хайх...">
             </div>
         </div>
-    
-        <div class="content">
-    
-            <div class="player">
-                <video id="anime-video" width="800" controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="player-options">
-                    <button id="play-btn">Play</button>
-                    <button id="pause-btn">Pause</button>
-                    <button id="fullscreen-btn">Fullscreen</button>
-                </div>
-            </div>
+        <div class="right">
+            <button data-page="login.html" class="header-btn">Нэвтрэх</button>
+        </div>
+    </div>
 
-        
-            <div class="sidebar">
-                <div class="anime-info">
-                    <img src="attack on titan.png" alt="Poster of Attack on Titan">
-                    <h3>Attack on Titan</h3>
-                    <p>11+ | 1080HD | 24 Episodes | 23M views</p>
-                </div>
+    <div class="content">
 
-                <div class="comments">
-                    <div class="comment">
-                        <p class="username">Дулмаа</p>
-                        <p lang="mn">Дараагийн ангийн спойлэр өгнө шүү. Манга дээр үнэхээр гоё юм болсон</p>
-                        <small>12:30 PM - Apr 21, 2021</small>
-                    </div>
-                </div>
+        <div class="player">
+            <video id="anime-video" width="800" controls>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="player-options">
+                <button id="play-btn">Play</button>
+                <button id="pause-btn">Pause</button>
+                <button id="fullscreen-btn">Fullscreen</button>
             </div>
         </div>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <div class="sidebar">
+            <div class="anime-info">
+                <img src="attack on titan.png" alt="Poster of Attack on Titan">
+                <h3>Attack on Titan</h3>
+                <p>11+ | 1080HD | 24 Episodes | 23M views</p>
+            </div>
+
+            <div class="comments">
+                <div class="comment">
+                    <p class="username">Дулмаа</p>
+                    <p lang="mn">Дараагийн ангийн спойлэр өгнө шүү. Манга дээр үнэхээр гоё юм болсон</p>
+                    <small>12:30 PM - Apr 21, 2021</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
