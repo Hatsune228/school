@@ -11,17 +11,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (username === "admin" && password === "password") {
                 alert("Login successful!");
-                window.location.href = "index.html"; // Redirect to the list page
+                localStorage.setItem("loggedIn", "true");
+                window.location.href = "index.html"; // Redirect to the index page
             } else {
                 alert("Invalid credentials!");
             }
         });
     }
 
-    // Anime list page functionality
+    // Add event listeners to buttons for navigation
+    const navButtons = document.querySelectorAll('button[data-page]');
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const page = button.getAttribute('data-page');
+            window.location.href = page;
+        });
+    });
+
+    // Add event listener to logo for navigation to home page
+    const logoButton = document.querySelector('.logo');
+    if (logoButton) {
+        logoButton.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
+
+    // Check login state on index page
     if (pathname.endsWith("index.html")) {
-        // No special functionality needed for now, but this is where you can add dynamic loading.
+        const loggedIn = localStorage.getItem("loggedIn");
+        if (loggedIn === "true") {
+            const loginButton = document.querySelector('.header-btn');
+            loginButton.textContent = "Logged In";
+            loginButton.disabled = true; // Optionally disable the button
+        }
+
+        // Add event listener to search input
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                window.location.href = 'List.html'; // Redirect to the list page
+            }
+        });
+
         console.log("Anime List Page");
+    }
+
+    // Info page functionality
+    if (pathname.endsWith("info.html")) {
+        const playButton = document.getElementById('play-button');
+        playButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'play.html';
+        });
     }
 
     // Play page functionality
@@ -40,9 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Info page functionality
-    if (pathname.endsWith("info.html")) {
-        console.log("Info Page Loaded");
-        // Add dynamic behaviors if needed.
-    }
+    // Add event listeners to anime items for navigation
+    const animeItems = document.querySelectorAll('.anime-item');
+    animeItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const page = item.getAttribute('data-page');
+            window.location.href = page;
+        });
+    });
 });
