@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 <body>
     <div class="header">
         <div class="left">
-            <button><i class="fa-solid fa-arrow-right"></i></button>
-            <button onclick="document.location='index.html'"><i class="fa-brands fa-html5"></i></button></div>
+            <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
+            <button data-page="index.html" class="logo"><i class="fa-brands fa-html5"></i></button>
+        </div>
         <div class="center">
             <div class="search-bar">
-            <p><i class="fa-solid fa-magnifying-glass"></i></p>
-            <input type="text">
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+                <input type="text" placeholder="Анимэ хайх...">
             </div>
         </div>
         <div class="right">
-            <button onclick="document.location='login.html'" class="header-btn">Нэвтрэх</button>
+            <button data-page="login.html" class="header-btn">Нэвтрэх</button>
         </div>
     </div>
     <div class="main-container">
@@ -38,21 +38,21 @@
                 <div class="tag">23m</div>
             </div>
             <p class="description">
-                Attack on Titan is a popular anime and manga series that explores humanity's struggle against giant humanoid creatures known as Titans. The story is set in a world where the remnants of humanity live within enormous walled cities to protect themselves from these monstrous beings. As the narrative unfolds, themes of survival, freedom, and the complexities of human nature are intricately woven into the characters' journeys and battles.
+                Attack on Titan is a popular anime and manga series that explores humanity's struggle against giant humanoid creatures known as Titans. The story is set in a world where the remnants of humanity live within enormous walled cities to protect themselves from the Titans.
             </p>
             <div class="buttons">
-                <a href="#" class="button play">Тоглуулах</a>
+                <a href="#" class="button play" id="play-button">Тоглуулах</a>
                 <a href="#" class="button save">Хадгалах</a>
             </div>
         </div>
         <div class="details">
-            <p><span>Нэр:</span> </p>
-            <p><span>Гарсан жил / улирал:</span> </p>
-            <p><span>Зохиолч:</span> </p>
-            <p><span>Студио:</span> </p>
-            <p><span>Төлөв:</span> </p>
-            <p><span>Үнэлгээ:</span> </p>
-            <p><span>Төрөл:</span> </p>
+            <p><span>Нэр:</span> Attack on Titan</p>
+            <p><span>Гарсан жил / улирал:</span> 2013 / Spring</p>
+            <p><span>Зохиолч:</span> Hajime Isayama</p>
+            <p><span>Студио:</span> Wit Studio</p>
+            <p><span>Төлөв:</span> Completed</p>
+            <p><span>Үнэлгээ:</span> 8.8/10</p>
+            <p><span>Төрөл:</span> Action, Drama, Fantasy</p>
         </div>
     </div>
     <footer>
