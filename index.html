@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 <body>
 <div class="header">
     <div class="left">
-        <button><i class="fa-solid fa-arrow-right"></i></button>
-        <button onclick="document.location='index.html'"><i class="fa-brands fa-html5"></i></button></div>
+        <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
+        <button data-page="index.html" class="logo"><i class="fa-brands fa-html5"></i></button>
+    </div>
     <div class="center">
         <div class="search-bar">
         <p><i class="fa-solid fa-magnifying-glass"></i></p>
-        <input type="text">
+        <input type="text" id="search-input" placeholder="Анимэ хайх...">
         </div>
     </div>
     <div class="right">
-        <button onclick="document.location='login.html'" class="header-btn">Нэвтрэх</button>
+        <button data-page="login.html" class="header-btn">Нэвтрэх</button>
     </div>
 </div>
 <div class="hero">
