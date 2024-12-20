@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="mn">
 <head>
@@ -8,18 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 <body>
     <div class="header">
         <div class="left">
             <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
-            <button data-page="index.html"><i class="fa-brands fa-html5"></i></button>
+            <button data-page="index.html" class="logo"><i class="fa-brands fa-html5"></i></button>
         </div>
         <div class="center">
             <div class="search-bar">
                 <p><i class="fa-solid fa-magnifying-glass"></i></p>
-                <input type="text" placeholder="Анимэ хайх...">
+                <input type="text" id="search-input" placeholder="Анимэ хайх...">
             </div>
         </div>
         <div class="right">
@@ -35,27 +34,27 @@
                 <h4 class="text-right"><span>Бүх анимэ</span></h4>
             </div>
             <div class="anime-grid">
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="totoro.png" alt="My Neighbor Totoro">
                     <p>My Neighbor Totoro</p>
                 </div>
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="monogatari.png" alt="Ore no monogatari">
                     <p>Ore no monogatari</p>
                 </div>
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="ouran.png" alt="Ouran High School Host Club">
                     <p>Ouran High School Host Club</p>
                 </div>
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="gojo.png" alt="Jujutsu Kaisen">
                     <p>Jujutsu Kaisen</p>
                 </div>
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="my-hero.png" alt="My Hero Academia">
                     <p>My Hero Academia</p>
                 </div>
-                <div class="anime-item">
+                <div class="anime-item" data-page="play.html">
                     <img src="oshinoko.png" alt="Oshi no Ko">
                     <p>Oshi no Ko</p>
                 </div>
