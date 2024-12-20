@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аркэйн</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <button data-page="info.html"><i class="fa-solid fa-arrow-right"></i></button>
+            <button data-page="index.html"><i class="fa-brands fa-html5"></i></button>
+        </div>
+        <div class="center">
+            <div class="search-bar">
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+                <input type="text" placeholder="Анимэ хайх...">
+            </div>
+        </div>
+        <div class="right">
+            <button data-page="login.html" class="header-btn">Нэвтрэх</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left content -->
+        <div class="list-left">
+            <div class="list-title">
+                <h2 class="text-left"><span>Энэ улиралд</span></h2>  
+                <h4 class="text-right"><span>Бүх анимэ</span></h4>
+            </div>
+            <div class="anime-grid">
+                <div class="anime-item">
+                    <img src="totoro.png" alt="My Neighbor Totoro">
+                    <p>My Neighbor Totoro</p>
+                </div>
+                <div class="anime-item">
+                    <img src="monogatari.png" alt="Ore no monogatari">
+                    <p>Ore no monogatari</p>
+                </div>
+                <div class="anime-item">
+                    <img src="ouran.png" alt="Ouran High School Host Club">
+                    <p>Ouran High School Host Club</p>
+                </div>
+                <div class="anime-item">
+                    <img src="gojo.png" alt="Jujutsu Kaisen">
+                    <p>Jujutsu Kaisen</p>
+                </div>
+                <div class="anime-item">
+                    <img src="my-hero.png" alt="My Hero Academia">
+                    <p>My Hero Academia</p>
+                </div>
+                <div class="anime-item">
+                    <img src="oshinoko.png" alt="Oshi no Ko">
+                    <p>Oshi no Ko</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right content -->
+        <div class="list-right">
+            <h3>Genre</h3>
+            <ul class="genre-list">
+                <li>Өдөр тутмын өгүүллэг</li>
+                <li>Хайр дурлал</li>
+                <li>Дайн, тулаан</li>
+                <li>Цэргийн арми</li>
+                <li>Шинжлэх ухаан</li>
+                <li>Хүүхдийн дурсамж сэргээм</li>
+                <li>Спорт</li>
+                <li>Медалгаа</li>
+                <li>Оюун хүч</li>
+                <li>Инээдэм</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
