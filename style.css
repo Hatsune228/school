@@ -25,8 +25,8 @@
     --general-font: arial;
     --primary-sec-color: #1c1c1c;
     --primary-sec1-color: #222;
-   
 }
+
 /* General Reset */
 * {
     margin: 0;
@@ -34,158 +34,89 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.login {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .login_body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--primary-color);
-  }
+}
 body {
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     color: var(--tertiary-color);
     overflow: hidden;
 }
 /* Header Section */
 .header {
-    display:flex;
-    position:static;
+    display: flex;
     justify-content: space-between;
     padding: 8px 18px;
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid var(--black1);
-    height: 10%;
 }
-.header.left {
-    justify-content: left;
-}
-.left button  {
-    font-size: 40px;
-    color: var(--tertiary-color);
-    background-color:rgba(0, 0, 0, 0.8);
-    border: none;
-    justify-content:space-between;
-    margin: 4px;
-    margin-right: 30px;
-    cursor: pointer;
-}
-
-.header .center {
-    flex: 1;
+.left, .center, .right {
     display: flex;
-    justify-content: center;
+    align-items: center;
+}
+.left button, .right button {
+    font-size: 24px;
+    color: var(--tertiary-color);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.left button i, .right button i {
+    font-size: 24px;
 }
 .search-bar {
+    display: flex;
+    align-items: center;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     border: 2px solid var(--primary-color);
     border-radius: 20px;
     overflow: hidden;
     background: var(--tertiary-color);
-    height: 50px;
-    margin-top: 4px;
+    height: 40px;
 }
 .search-bar input {
     border: none;
     padding: 8px 10px;
     outline: none;
     font-size: 16px;
+    flex: 1;
 }
-
 .search-bar p {
-   color: var(--primary-color);
-   padding: 10px 15px;
-   font-size: 20px;
-   margin-top: 1px;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    font-size: 20px;
+    margin: 0;
 }
-
-
-.right .header-btn {
-    margin-left: 10px;
-    margin-top: 3px;
+.header-btn {
     padding: 8px 15px;
     background: var(--orange);
     color: var(--tertiary-color);
     border: none;
-    font-size: 20px;
-    border-radius: 60px;
+    font-size: 16px;
+    border-radius: 20px;
     cursor: pointer;
-    font-weight: 1000;
     transition: background 0.5s ease;
-    height: 50px;
-    width: 140px;
 }
-
-.right .header-btn:hover {
+.header-btn:hover {
     background: var(--orange2);
 }
-.background {
-    background: url('bg.png');
+/* Login Page Styles */
+.login {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.hero {
-    position:absolute;
+.login_body {
     display: flex;
+    justify-content: center;
     align-items: center;
-    height: calc(100% - 50px);
-    width: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-    overflow: hidden;
-}
-
-.background {
-    background: url('bg.png') no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.content {
-    padding: 50px;
-    max-width: 600px;
-}
-
-.title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--tertiary-color);
-}
-
-.description {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--whiteish);
-    margin-bottom: 20px;
-}
-.buttons button {
-    padding: 8px 15px;
-    margin-right: 30px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 60px;
-    height: 60px;
-    width: 180px;
-}
-
-.play-btn {
-    background-color: var(--orange3);
-    color: var(--tertiary-color);
-}
-
-.pause-btn {
-    background-color: var(--white);
-    color: var(--primary-color);
+    min-height: 100vh;
+    background: var(--primary-color);
 }
 .Box {
     position: relative;
@@ -194,214 +125,191 @@ body {
     background: var(--primary-sec-color);
     border-radius: 8px;
     overflow: hidden;
-  }
-  
-  .Box::before,
-  .Box::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 380px;
-      height: 420px;
-      background: linear-gradient(0deg, transparent, var(--orange3), var(--orange3), var(--orange3) ); 
-      z-index: 1;
-      transform-origin: bottom right;
-      animation: animate 6s linear infinite;
-  }
-  
-  .borderline::before,
-  .borderline::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 380px;
-      height: 420px;
-      background: linear-gradient(0deg, transparent, var(--orange) , var(--orange) , var(--orange) ); 
-      z-index: 1;
-      transform-origin: bottom right;
-      animation: animate 6s linear infinite;
-      animation-delay: 3s; /* Adjusted for smooth circling */
-  }
-  
-  @keyframes animate
-   {
+}
+.Box::before,
+.Box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, var(--orange3), var(--orange3), var(--orange3) ); 
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.borderline::before,
+.borderline::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, var(--orange) , var(--orange) , var(--orange) ); 
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: 3s; /* Adjusted for smooth circling */
+}
+@keyframes animate {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-  }
-  .Box form
-  { position: absolute;
-      inset: 4px;
-      background: var(--primary-sec1-color) ;
-      padding: 50px 40px;
-      border-radius: 8px;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-  
-  }
-  .Box form h2
-  { color:var(--thirddary-color);
+}
+.Box form {
+    position: absolute;
+    inset: 4px;
+    background: var(--primary-sec1-color);
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+.Box form h2 {
+    color: var(--tertiary-color);
     font-weight: 500;  
     text-align: center;
     letter-spacing: 0.1rem;
-  
-  
-  }
-  .Box form .inputBox
-  {position: relative;
-  width: 300px;
-  margin-top: 35px;
-  
-  }
-  .Box form .inputBox input
-  {
-      position: relative;
-      width: 100%;
-      padding: 20px 10px 10px;
-      background: transparent ;
-      outline: none;
-      border: none;
-      box-shadow: none;
-      color: var(--black2-color);
-      font-size:var(--font-size1) ;
-      letter-spacing: 0.5em ;
-      transition: 0.5s;
-      z-index: 10;
-  }
-  
-  .Box form .inputBox span
-  { position: absolute;
-      left: 0;
-      padding: 20px 0px 10px;
-      pointer-events: none;
-      color: var(--nav-text-color);
-      font-size: var(--font-size1);
-      letter-spacing: 0.05 rem;
-      transition: 0.5s;
-  }
-  .Box form .inputBox input:valid ~ span,
-  .Box form .inputBox input:focus ~ span
-  
-  { color: var(--tertiary-color);
+}
+.Box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.Box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: var(--black2-color);
+    font-size: var(--font-size1);
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.Box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: var(--nav-text-color);
+    font-size: var(--font-size1);
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+}
+.Box form .inputBox input:valid ~ span,
+.Box form .inputBox input:focus ~ span {
+    color: var(--tertiary-color);
     font-size: 0.75em;
     transform: translateY(-34px);
-  
-  }
-  .Box form .inputBox i
-  { position: absolute;
+}
+.Box form .inputBox i {
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     height: 2px;
-    background:var(--tertiary-color);
-  border-radius: 4px;
-  overflow: hidden;
-  transition: 0.5s;
-    pointer-events: none;}
-  
-  .Box form .inputBox input:valid ~ i,
-  .Box form .inputBox input:focus ~ i
-  {
+    background: var(--tertiary-color);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.Box form .inputBox input:valid ~ i,
+.Box form .inputBox input:focus ~ i {
     height: 44px;
-  
-  }
-  .Box form .links 
-  { display:flex ;
-   justify-content: space-between;
-  }
-  .Box form .links a
-  {margin: 10px 0;
+}
+.Box form .links {
+    display: flex;
+    justify-content: space-between;
+}
+.Box form .links a {
+    margin: 10px 0;
     font-size: 0.75em;
     color: 8f8f8f;
     text-decoration: none;
-  }
-  .Box form .links a:hover,
-  .Box form .links a:nth-child(2)
-  {
+}
+.Box form .links a:hover,
+.Box form .links a:nth-child(2) {
     color: var(--tertiary-color);
-  
-  }
-  .Box form .inputBox input[type="submit"]:before
-  {
+}
+.Box form .inputBox input[type="submit"]:before {
     border: none;
     outline: none;
     padding: 9px 25px;
-    background:var(--tertiary-color);
+    background: var(--tertiary-color);
     cursor: pointer;
     font-size: 0.9em;
     border-radius: 4px;
     font-weight: 600;
     width: 100px;
     margin-top: 10px;
-  
-  }
+}
+
 /* info page css */
-  .info {
+.info {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--black1);
     color: var(--tertiary-color);
     margin: 0;
     padding: 0;
 }
-
 .main-container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 50px);
     padding: 20px;
-    gap: 20px;
-    background-color: var(--black2-color);
-    border-radius: 10px;
 }
-
-.poster {
-    flex: 1;
-}
-
 .poster img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
-
 .info {
-    flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
 }
-
 .info h1 {
-    font-size: 28px;
-    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
-
 .tags {
     display: flex;
     gap: 10px;
     margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .tag {
     padding: 5px 10px;
     background-color: var(--black4);
     border-radius: 5px;
 }
-
 .description {
     margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
-
 .buttons {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .button {
     padding: 10px 20px;
     text-align: center;
@@ -409,76 +317,71 @@ body {
     text-decoration: none;
     color: var(--tertiary-color);
 }
-
 .button.play {
-    background-color:var(--orange);
+    background-color: var(--orange);
 }
-
 .button.save {
     background-color: var(--black4);
 }
-
 .details {
-    flex: 1;
-    background-color: var(--black3);
+    margin-top: 20px;
     padding: 15px;
+    background-color: var(--black3);
     border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
 }
-
 .details p {
     margin: 10px 0;
 }
-
 .details span {
     font-weight: bold;
 }
-
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--black5);
     font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
-/* list style */
+
+/* List Page Styles */
 .container {
     display: flex;
     margin: 20px;
 }
-
 .list-left {
     flex: 3;
     margin-right: 20px;
 }
-
 .list-right {
     flex: 1;
     padding: 20px;
     border-radius: 8px;
 }
-
 .anime-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 20px;
 }
-
 .anime-item img {
     width: 100%;
     border-radius: 8px;
     transition: transform 0.3s;
 }
-
 .anime-item img:hover {
     transform: scale(1.05);
 }
-
 .genre-list {
     list-style: none;
     padding: 0;
 }
-
 .genre-list li {
     margin: 10px 0;
     padding: 5px 10px;
@@ -490,20 +393,19 @@ footer {
     text-align: left; /* Ensures the text is left-aligned */
     width: 50%; /* Adjust width to fit properly */
 }
-
 .text-right {
     float: right; /* Aligns content to the right */
     text-align: right; /* Ensures the text is right-aligned */
     width: 50%; /* Adjust width to fit properly */
 }
-/* play */
+
+/* Play Page Styles */
 .play_page {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #1c1c1c;
     color: white;
 }
-
 .navbar {
     background-color: #2a2a2a;
     padding: 10px 20px;
@@ -511,46 +413,38 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
-
 .navbar .logo {
     font-size: 24px;
     color: #ff5c5c;
 }
-
 .navbar .search-bar {
     flex-grow: 1;
     margin: 0 20px;
     display: flex;
 }
-
 .navbar input[type="text"] {
     width: 100%;
     padding: 8px;
     border-radius: 4px;
     border: none;
 }
-
 .content {
     display: flex;
     padding: 20px;
 }
-
 .player {
     flex: 3;
     margin-right: 20px;
 }
-
 .player img {
     width: 100%;
     border-radius: 10px;
 }
-
 .player-options {
     margin-top: 10px;
     display: flex;
     gap: 10px;
 }
-
 .player-options button {
     padding: 8px 16px;
     border: none;
@@ -559,39 +453,32 @@ footer {
     color: white;
     cursor: pointer;
 }
-
 .player-options button:hover {
     background-color: #ff5c5c;
 }
-
 .sidebar {
     flex: 1;
     background-color: #2a2a2a;
     padding: 10px;
     border-radius: 10px;
 }
-
 .sidebar .anime-info {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .sidebar .anime-info img {
     width: 100%;
     border-radius: 10px;
 }
-
 .sidebar .comments {
     margin-top: 20px;
 }
-
 .sidebar .comments .comment {
     background-color: #3a3a3a;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
 }
-
 .sidebar .comments .comment .username {
     font-weight: bold;
     color: #ff5c5c;
