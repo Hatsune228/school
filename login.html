@@ -2,21 +2,21 @@
 <html class="login">
 <head>
     <meta charset="UTF-8" />
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="login_body">
     <div class="Box">
         <span class="borderline"></span>
-    <form>
+    <form id="login-form">
         <h2>Sign in</h2>
         <div class="inputBox">
-            <input type="text" required="required">
+            <input type="text" id="username" required="required">
             <span>Username</span>
             <i></i>
         </div>
         <div class="inputBox">
-            <input type="password" required="required">
+            <input type="password" id="password" required="required">
             <span>Password</span>
             <i></i>
         </div>
@@ -24,7 +24,7 @@
             <a href="#">Forgot password</a>
             <a href="#">Signup</a>
         </div>
-        <input type="submit" value="login" >
+        <input type="submit" value="Login">
     </form>
     </div>
     <script src="script.js"></script>
